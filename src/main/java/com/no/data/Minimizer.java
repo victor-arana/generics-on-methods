@@ -13,7 +13,10 @@ public class Minimizer
         System.out.println( "Hello World!" );
     }
 
-    public static Object min(List<Person> madMen, AgeComparator ageComparator) {
+    public static Object min(List<Person> people, AgeComparator ageComparator) {
+        if(people.isEmpty()){
+            throw new IllegalArgumentException("List is empty, cannot find minimum.");
+        }
         return null;
     }
 }
