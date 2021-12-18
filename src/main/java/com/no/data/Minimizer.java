@@ -12,6 +12,18 @@ public class Minimizer
         if(list.isEmpty()){
             throw new IllegalArgumentException("List is empty, cannot find minimum.");
         }
-        return null;
+
+        // Assume the first element is the lowest
+        Object lowestElement = list.get(0);
+
+        // Look for a lower element on the remaining elements
+        for (int i = 1; i < list.size(); i++) {
+            final Object element = list.get(i);
+            if (comparator.compare(element, lowestElement) < 0) {
+                lowestElement = element;
+            }
+        }
+
+        return lowestElement;
     }
 }
