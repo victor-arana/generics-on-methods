@@ -4,6 +4,7 @@ package com.no.data;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MinimizerTest
 {
@@ -15,7 +16,7 @@ public class MinimizerTest
         List<Person> madMen = new ArrayList<>();
         // When calling min method
         final Person actualPerson =
-                (Person) Minimizer.min(madmen, new AgeComparator());
+                (Person) Minimizer.min(madMen, new AgeComparator());
         // Should throw an IllegalArgumentException
     }
 }
