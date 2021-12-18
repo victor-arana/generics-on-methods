@@ -19,4 +19,11 @@ public class MinimizerTest
                 (Person) Minimizer.min(madMen, new AgeComparator());
         // Should throw an IllegalArgumentException
     }
+
+    @Test
+    public void shouldReturnMinimumElementByAge(){
+        // Given an unordered list with size > 1
+        // When calling min method on this list
+        // Should return the element having the less age
+    }
 }
