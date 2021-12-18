@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Minimizer
 {
+    // Prevent the instantiation of a utility class
+    private Minimizer() {}
 
     public static Object min(List list, Comparator comparator) {
         if(list.isEmpty()){
