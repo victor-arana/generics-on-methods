@@ -1,6 +1,7 @@
 package com.no.data;
 
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -22,8 +23,18 @@ public class MinimizerTest
 
     @Test
     public void shouldReturnMinimumElementByAge(){
-        // Given an unordered list with size > 1
+        // Given an unordered by age list with size > 1
+        List<Person> madMen = new ArrayList<>();
+        madMen.add(new Person("Don Draper", 89));
+        madMen.add(new Person("Peggy Olson", 65));
+        madMen.add(new Person("Bert Cooper", 100));
+
         // When calling min method on this list
-        // Should return the element having the less age
+        final Person actualPerson =
+                (Person) Minimizer.min(madMen, new AgeComparator());
+
+        // Should return the element having the minimum age
+        final Person expectedPerson = new Person("Peggy Olson", 65);
+        Assert.assertEquals(expectedPerson, actualPerson);
     }
 }
