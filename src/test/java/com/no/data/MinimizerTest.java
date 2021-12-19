@@ -16,8 +16,7 @@ public class MinimizerTest
         // Given an empty list
         List<Person> madMen = new ArrayList<>();
         // When calling min method
-        final Person actualPerson =
-                (Person) Minimizer.min(madMen, new AgeComparator());
+        Minimizer.min(madMen, new AgeComparator());
         // Should throw an IllegalArgumentException
     }
 
@@ -30,8 +29,7 @@ public class MinimizerTest
         madMen.add(new Person("Bert Cooper", 100));
 
         // When calling min method on this list
-        final Person actualPerson =
-                (Person) Minimizer.min(madMen, new AgeComparator());
+        final Person actualPerson = Minimizer.min(madMen, new AgeComparator());
 
         // Should return the element having the minimum age
         final Person expectedPerson = new Person("Peggy Olson", 65);
