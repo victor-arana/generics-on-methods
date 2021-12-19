@@ -8,7 +8,7 @@ public class Minimizer
     // Prevent the instantiation of a utility class
     private Minimizer() {}
 
-    public static <T> Object min(List<T> list, Comparator<T> comparator) {
+    public static <T> T min(List<T> list, Comparator<T> comparator) {
         if(list.isEmpty()){
             throw new IllegalArgumentException("List is empty, cannot find minimum.");
         }
