@@ -29,7 +29,28 @@ public class PersonStorageTest {
         // When save and load the same Person
         saver.save(person);
         // Then loaded person is equals to saved person
-        Assert.assertEquals(person, loader.load());
+        Person actualPerson = loader.load();
+        Assert.assertEquals(person, actualPerson);
+    }
+
+    @Test
+    public void shouldSaveAndLoadPartner() throws Exception {
+        // Given a Partner instance
+        Person person = new Partner("Don Draper", 89);
+        saver.save(person);
+        // Then loaded person is equals to saved person
+        final Person actualPerson = loader.load();
+        Assert.assertEquals(person, actualPerson);
+    }
+
+    @Test
+    public void shouldSaveAndLoadEmployee() throws Exception {
+        // Given an Employee instance
+        Person person = new Employee("Peggy Olson", 65);
+        saver.save(person);
+        // Then loaded person is equals to saved person
+        final Person actualPerson = loader.load();
+        Assert.assertEquals(person, actualPerson);
     }
 
     // Run after each test
