@@ -53,6 +53,11 @@ public class PersonStorageTest {
         Assert.assertEquals(person, actualPerson);
     }
 
+    @Test
+    public void shouldSaveAndLoadArrayOfPeople() throws Exception {
+
+    }
+
     // Run after each test
     @After
     public void tearDown(){
