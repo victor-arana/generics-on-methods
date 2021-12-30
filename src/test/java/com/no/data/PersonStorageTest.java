@@ -55,7 +55,15 @@ public class PersonStorageTest {
 
     @Test
     public void shouldSaveAndLoadArrayOfPeople() throws Exception {
+        // Given an array of two Person objects
+        Person[] persons = new Person[2];
+        persons[0] = new Partner("Don Draper", 89);
+        persons[1] = new Partner("Bert Cooper", 100);
+        // When save the array of persons
+        saver.saveAll(persons);
 
+        Assert.assertEquals(persons[0], loader.load());
+        Assert.assertEquals(persons[1], loader.load());
     }
 
     // Run after each test
