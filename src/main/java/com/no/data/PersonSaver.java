@@ -18,4 +18,10 @@ public class PersonSaver {
         file.writeUTF(person.getName());
         file.writeInt(person.getAge());
     }
+
+    public void saveAll(Person[] persons) throws IOException {
+        for (Person person: persons) {
+            save(person);
+        }
+    }
 }
