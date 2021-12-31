@@ -66,6 +66,13 @@ public class PersonStorageTest {
         Assert.assertEquals(persons[1], loader.load());
     }
 
+    @Test(expected = ArrayStoreException.class)
+    public void shouldThrowException() throws Exception {
+        // Given an array of two Person objects
+        Person[] persons = new Employee[2];
+        persons[0] = new Partner("Don Draper", 89);
+    }
+
     // Run after each test
     @After
     public void tearDown(){
