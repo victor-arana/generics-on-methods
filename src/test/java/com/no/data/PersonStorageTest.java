@@ -73,6 +73,11 @@ public class PersonStorageTest {
         persons[0] = new Partner("Don Draper", 89);
     }
 
+    @Test
+    public void shouldSaveAndLoadListOfPeople() throws Exception {
+
+    }
+
     // Run after each test
     @After
     public void tearDown(){
