@@ -26,7 +26,7 @@ public class PersonSaver {
         }
     }
 
-    public void saveAll(final List<Person> persons) throws IOException {
+    public void saveAll(final List<? extends Person> persons) throws IOException {
         for(Person person: persons){
             save(person);
         }

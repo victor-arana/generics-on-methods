@@ -89,6 +89,20 @@ public class PersonStorageTest {
         Assert.assertEquals(persons.get(1), loader.load());
     }
 
+    @Test
+    public void shouldSaveAndLoadListOfPartners() throws Exception {
+        // Given a List of persons
+        List<Partner> persons = new ArrayList<>();
+        persons.add(new Partner("Don Draper", 89));
+        persons.add(new Partner("Bert Cooper", 100));
+
+        // When save the array of persons
+        saver.saveAll(persons);
+        // Then should load list of people
+        Assert.assertEquals(persons.get(0), loader.load());
+        Assert.assertEquals(persons.get(1), loader.load());
+    }
+
     // Run after each test
     @After
     public void tearDown(){
