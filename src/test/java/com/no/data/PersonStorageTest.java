@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersonStorageTest {
 
@@ -75,7 +77,16 @@ public class PersonStorageTest {
 
     @Test
     public void shouldSaveAndLoadListOfPeople() throws Exception {
+        // Given a List of persons
+        List<Person> persons = new ArrayList<>();
+        persons.add(new Partner("Don Draper", 89));
+        persons.add(new Partner("Bert Cooper", 100));
 
+        // When save the array of persons
+        saver.saveAll(persons);
+        // Then should load list of people
+        Assert.assertEquals(persons.get(0), loader.load());
+        Assert.assertEquals(persons.get(1), loader.load());
     }
 
     // Run after each test
