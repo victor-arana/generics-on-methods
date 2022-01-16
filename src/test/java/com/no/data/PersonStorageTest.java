@@ -103,6 +103,26 @@ public class PersonStorageTest {
         Assert.assertEquals(persons.get(1), loader.load());
     }
 
+    @Test
+    public void shouldLoadListOfPeople() throws IOException {
+
+        // Given a few saved Persons.
+        final Partner donDraper = new Partner("Don Draper", 89);
+        final Employee peggyOlson = new Employee("Peggy Olson", 65);
+        saver.save(donDraper);
+        saver.save(peggyOlson);
+
+        // When passing an empty list in order to be loaded.
+        List<Person> people = new ArrayList<>();
+        loader.loadAll(people);
+
+        // The elements of the list are equal to the ones that were
+        // loaded before.
+        Assert.assertEquals(donDraper, people.get(0));
+        Assert.assertEquals(peggyOlson, people.get(1));
+    }
+
+
     // Run after each test
     @After
     public void tearDown(){
