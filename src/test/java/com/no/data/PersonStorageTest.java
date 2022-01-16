@@ -104,7 +104,7 @@ public class PersonStorageTest {
     }
 
     @Test
-    public void shouldLoadListOfPeople() throws IOException {
+    public void shouldLoadListOfPeople() throws Exception {
 
         // Given a few saved Persons.
         final Partner donDraper = new Partner("Don Draper", 89);
