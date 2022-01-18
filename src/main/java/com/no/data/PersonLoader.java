@@ -33,7 +33,7 @@ public class PersonLoader {
         }
     }
 
-    public void loadAll(List<Person> people) throws ClassNotFoundException {
+    public void loadAll(List<? super Person> people) throws ClassNotFoundException {
         Person person;
         while((person = load()) != null){
             people.add(person);
