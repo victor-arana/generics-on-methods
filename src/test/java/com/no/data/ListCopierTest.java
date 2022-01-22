@@ -25,7 +25,13 @@ public class ListCopierTest {
     @Test
     public void shouldCopyOrangesToFruits(){
         // Given a list of Oranges
+        List<Orange> oranges = new ArrayList<>();
+        oranges.add(new Orange());
+        oranges.add(new Orange());
         // When copying into a list of fruits
+        List<Fruit> fruits = new ArrayList<>();
+        ListCopier.copy(oranges, fruits);
         // Size of fruits should be two
+        Assert.assertTrue(oranges.size() == fruits.size());
     }
 }
