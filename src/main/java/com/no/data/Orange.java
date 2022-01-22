@@ -1,4 +1,4 @@
 package com.no.data;
 
-public class Orange {
+public class Orange extends Fruit{
 }

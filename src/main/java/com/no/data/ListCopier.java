@@ -3,9 +3,9 @@ package com.no.data;
 import java.util.List;
 
 public class ListCopier {
-    public static void copy(List<Banana> source, List<Fruit> target) {
-        for(Banana banana: source){
-            target.add(banana);
+    public static <T> void copy(List<? extends T> source, List<T> target) {
+        for(T element: source){
+            target.add(element);
         }
     }
 }
