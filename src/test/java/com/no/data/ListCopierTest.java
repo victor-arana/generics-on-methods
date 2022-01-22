@@ -21,4 +21,11 @@ public class ListCopierTest {
         // Size of fruits should be two
         Assert.assertTrue(bananas.size() == fruits.size());
     }
+
+    @Test
+    public void shouldCopyOrangesToFruits(){
+        // Given a list of Oranges
+        // When copying into a list of fruits
+        // Size of fruits should be two
+    }
 }
