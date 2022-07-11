@@ -1,14 +1,25 @@
 package com.no.data;
 
-import static org.junit.Assert.assertTrue;
-
+import com.no.data.model.Person;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MinimizerTest
 {
-    @Test
-    public void shouldAnswerWithTrue()
+
+    @Test(expected = IllegalArgumentException.class)
+    public void onEmptyList_throw_IllegalArgumentException()
     {
-        assertTrue( true );
+
+        // Given an empty list
+        List<Person> madMen = new ArrayList<>();
+
+        // When calling min method
+        Person madMan = Minimizer.min(madMen);
+
+        // Then throw an IllegalArgumentException
     }
+
 }
