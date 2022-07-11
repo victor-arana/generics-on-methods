@@ -9,7 +9,7 @@ import java.util.List;
 public class MinimizerTest
 {
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void onEmptyList_throw_IllegalArgumentException()
     {
 

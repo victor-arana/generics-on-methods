@@ -12,7 +12,13 @@ public class Minimizer
 {
 
     public static Person min(List<Person> people) {
+
+        if(people.isEmpty()){
+            throw new IllegalArgumentException("List is empty, cannot find minimum");
+        }
+
         return null;
+
     }
 
 }
