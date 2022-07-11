@@ -7,8 +7,10 @@ import org.junit.Test;
 public class MinimizerTest
 {
     @Test
-    public void shouldAnswerWithTrue()
+    public void onEmptyList_throw_IllegalArgumentException()
     {
-        assertTrue( true );
+        // Given an empty list
+        // When calling min method
+        // Then throw an IllegalArgumentException
     }
 }
