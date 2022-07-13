@@ -22,4 +22,11 @@ public class MinimizerTest
         // Then throw an IllegalArgumentException
     }
 
+    @Test
+    public void onNonEmptyList_return_youngestPerson(){
+        // Given an unordered list of people with size > 1
+        // When calling min method on this list
+        // Then return youngest Person
+    }
+
 }
