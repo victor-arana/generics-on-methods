@@ -4,10 +4,6 @@ import com.no.data.model.Person;
 
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
 public class Minimizer
 {
 
@@ -17,7 +13,18 @@ public class Minimizer
             throw new IllegalArgumentException("List is empty, cannot find minimum");
         }
 
-        return null;
+        // Assume the first person is the youngest
+        Person youngestPerson = people.get(0);
+
+        // Look for a younger person on the remaining people
+        for(int i = 1; i < people.size(); i++){
+            final Person person = people.get(i);
+            if(person.getAge() < youngestPerson.getAge()){
+                youngestPerson = person;
+            }
+        }
+
+        return youngestPerson;
 
     }
 
