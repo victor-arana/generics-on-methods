@@ -19,7 +19,7 @@ public class Minimizer
         // Look for a younger person on the remaining people
         for(int i = 1; i < people.size(); i++){
             final Person person = people.get(i);
-            if(person.getAge() < youngestPerson.getAge()){
+            if(person.compareTo(youngestPerson) < 0){
                 youngestPerson = person;
             }
         }
