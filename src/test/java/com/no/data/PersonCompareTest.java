@@ -14,10 +14,10 @@ public class PersonCompareTest {
         Person B = new Person("Victor", 40);
 
         // When compared
-        int comparisonResult = A.compareTo(B);
+        boolean personAisYoungerThanPersonB = A.compareTo(B) < 0;
 
         // Then comparison result is negative
-        Assert.assertTrue(comparisonResult < 0);
+        Assert.assertTrue(personAisYoungerThanPersonB);
 
     }
 
@@ -29,10 +29,10 @@ public class PersonCompareTest {
         Person B = new Person("Carolina", 35);
 
         // When compared
-        int comparisonResult = A.compareTo(B);
+        boolean personAandPersonBareTheSameAge = A.compareTo(B) == 0;
 
         // Then comparison result is zero
-        Assert.assertTrue(comparisonResult == 0);
+        Assert.assertTrue(personAandPersonBareTheSameAge);
     }
 
     @Test
@@ -43,10 +43,10 @@ public class PersonCompareTest {
         Person B = new Person("Victor", 40);
 
         // When compared
-        int comparisonResult = B.compareTo(A);
+        boolean personBisOlderThanPersonA = B.compareTo(A) > 0  ;
 
         // Then comparison result is positive
-        Assert.assertTrue(comparisonResult > 0);
+        Assert.assertTrue(personBisOlderThanPersonA);
     }
 
 
